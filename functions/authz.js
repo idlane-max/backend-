@@ -17,7 +17,7 @@ export async function requireAuth(req) {
 }
 
 export async function getUserRole(uid) {
-  const doc = await db.collection("users").doc(uid).get();
+  const doc = await db.collection("user").doc(uid).get();
   return doc.exists ? doc.data().role : null;
 }
 

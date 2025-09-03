@@ -11,7 +11,7 @@ export async function checkAdmin(req, res, next) {
 
     // Vérifier le token Firebase
     const decodedToken = await admin.auth().verifyIdToken(token);
-    const userDoc = await db.collection("users").doc(decodedToken.uid).get();
+    const userDoc = await db.collection("user").doc(decodedToken.uid).get();
 
     if (!userDoc.exists || userDoc.data().role !== "admin") {
       return res.status(403).json({ error: "Accès refusé" });

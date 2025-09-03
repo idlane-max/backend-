@@ -3,8 +3,8 @@ const admin = require("./firebase");
 async function createAdmin() {
   try {
     const user = await admin.auth().createUser({
-      email: "admin@example.com", // ⚠️ change cet email
-      password: "admin123",       // ⚠️ change ce mot de passe
+      email: "admin@ynov.com", // ⚠️ change cet email
+      password: "admin123@",      // ⚠️ change ce mot de passe
       displayName: "Super Admin",
     });
 
